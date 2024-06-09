@@ -31,6 +31,7 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.hpspells.core.Localisation.Language;
 import com.hpspells.core.api.APIHandler;
 import com.hpspells.core.api.event.SpellBookRecipeAddEvent;
 import com.hpspells.core.command.CommandInfo;
@@ -182,7 +183,7 @@ public class HPS extends JavaPlugin {
             Bukkit.getHelpMap().addTopic(new IndexHelpTopic("HarryPotterSpells", Localisation.getTranslation("hlpDescription"), "", helpTopics));
             PM.debug(Localisation.getTranslation("dbgHelpCommandsAdded"));
 
-            new Metrics(this, 2858);
+            setupCharts(new Metrics(this, 2858));
             
             // Crafting Changes
             PM.debug(Localisation.getTranslation("dbgCraftingStart"));
@@ -216,6 +217,38 @@ public class HPS extends JavaPlugin {
         this.WandManager = new WandManager(this);
         if (!setupCrafting()) return false;
         return true;
+    }
+    
+    private void setupCharts(Metrics metrics) {
+    	try {
+    		// Total Amount of Spells Casted
+//            metrics.addCustomChart(new Metrics.MultiLineChart("spells_casted_total", () -> {
+//            	Map<String, Integer> spellsCastMap = new HashMap<>();
+//				spellsCastMap.put("Total", MetricStatistics.getSpellsCast());
+//				spellsCastMap.put("Hits", MetricStatistics.getSuccesses());
+//				spellsCastMap.put("Misses", MetricStatistics.getFailures());
+//				return spellsCastMap;
+//            }));
+
+    		metrics.addCustomChart(new Metrics.SingleLineChart("total_spells_casted", () -> MetricStatistics.getSpellsCast()));
+    		metrics.addCustomChart(new Metrics.SingleLineChart("total_spells_successes", () -> MetricStatistics.getSuccesses()));
+    		metrics.addCustomChart(new Metrics.SingleLineChart("total_spells_failures", () -> MetricStatistics.getFailures()));
+
+            // Amount of Spells Casted per Spell
+            metrics.addCustomChart(new Metrics.SimpleBarChart("spells_casted_single", () -> {
+            	Map<String, Integer> spellsCastMap = new HashMap<>();
+				for (Spell spell : SpellManager.getSpells()) {
+					spellsCastMap.put(spell.getName(), MetricStatistics.getAmountOfTimesCast(spell));
+				}
+				return spellsCastMap;
+            } ));
+
+            // Language used
+            metrics.addCustomChart(new Metrics.SimplePie("Language", () -> Language.getLanuage(getConfig().getString("language")).toString()));
+        } catch (Exception e) {
+            PM.log(Level.WARNING, Localisation.getTranslation("errPluginMetrics"));
+            PM.debug(e);
+        }
     }
     
     public boolean setupCrafting() {
