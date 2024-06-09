@@ -182,6 +182,8 @@ public class HPS extends JavaPlugin {
             Bukkit.getHelpMap().addTopic(new IndexHelpTopic("HarryPotterSpells", Localisation.getTranslation("hlpDescription"), "", helpTopics));
             PM.debug(Localisation.getTranslation("dbgHelpCommandsAdded"));
 
+            new Metrics(this, 2858);
+            
             // Crafting Changes
             PM.debug(Localisation.getTranslation("dbgCraftingStart"));
             setupCrafting();
