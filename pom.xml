@@ -19,9 +19,9 @@
 
     <dependencies>
     	<dependency>
-          	<groupId>org.bukkit</groupId>
-          	<artifactId>bukkit</artifactId>
-         	<version>1.13.2-R0.1-SNAPSHOT</version>
+          	<groupId>org.spigotmc</groupId>
+          	<artifactId>spigot-api</artifactId>
+         	<version>1.20-R0.1-SNAPSHOT</version>
          	<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -34,15 +34,14 @@
     <build>
         <defaultGoal>package</defaultGoal>
         <finalName>HarryPotterSpells</finalName>
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 
         <resources>
             <resource>
-                <directory>src</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
+		        <targetPath>${basedir}</targetPath>
+		        <directory>${basedir}/src/main/resources</directory>
+		        <filtering>false</filtering>
+		    </resource>
         </resources>
 
         <plugins>

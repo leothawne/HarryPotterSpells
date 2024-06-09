@@ -21,3 +21,17 @@ dependency-reduced-pom.xml
 .DS_Store
 .DS_Storetarget
 /target
+br-portuguese.properties
+config.yml
+cooldown.yml
+de-german.properties
+es-spanish.properties
+it-italian.properties
+nl-dutch.properties
+PlayerSpellConfig.yml
+plugin.yml
+pom.xml
+spells.yml
+stats-url.txt
+us-english.properties
+zh-chinese.properties
