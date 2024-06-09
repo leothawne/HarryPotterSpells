@@ -18,7 +18,6 @@ public class Confringo extends Spell {
         super(instance);
     }
 
-    @SuppressWarnings("deprecation")
 	public boolean cast(Player p) {
         Fireball fb = p.launchProjectile(Fireball.class);
         fb.setShooter(p);

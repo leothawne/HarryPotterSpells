@@ -199,3 +199,4 @@ target/classes/META-INF/maven/HarryPotterSpells/HarryPotterSpells/pom.properties
 target/classes/META-INF/maven/HarryPotterSpells/HarryPotterSpells/pom.xml
 us-english.properties
 zh-chinese.properties
+/target/

@@ -25,7 +25,6 @@ public class SpellList extends HCommandExecutor {
 
     public static final Permission LIST_OTHERS = new Permission("harrypotterspells.list.others", PermissionDefault.OP);
 
-    @SuppressWarnings("deprecation")
 	@Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length > 1)
