@@ -60,6 +60,7 @@ public class Localisation {
         this.registerLang(Language.CHINESE, new File(langFolder, "zh-chinese.properties"));
 		this.registerLang(Language.PORTUGUESE, new File(langFolder, "br-portuguese.properties"));
 		this.registerLang(Language.KOREAN, new File(langFolder, "kr-korean.properties"));
+		this.registerLang(Language.CZECH, new File(langFolder, "cz-czech.properties"));
         if (loadDefaultLang())
         	this.loadLang(Language.getLanguage(HPS.getConfig().getString("language")));
     }
@@ -260,7 +261,8 @@ public class Localisation {
     	ITALIAN,
     	CHINESE,
     	PORTUGUESE,
-    	KOREAN;
+    	KOREAN,
+    	CZECH;
 
     	/**
     	 * Gets the language from its configuration name
@@ -282,6 +284,8 @@ public class Localisation {
 				return PORTUGUESE;
 			} else if (name.equalsIgnoreCase("kr-korean")) {
 				return KOREAN;
+			} else if (name.equalsIgnoreCase("cz-czech")) {
+				return CZECH;
 			}
     		return ENGLISH;
     	}

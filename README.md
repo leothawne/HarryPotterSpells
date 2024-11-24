@@ -34,6 +34,7 @@ To contribute to HarryPotterSpells take a look at our [Contributing file](https:
 * [milo526](https://github.com/milo526): Translations - Netherlands Dutch
 * [yebanme](https://github.com/yebanme): Translations - Chinese
 * Park JiHan: Translations - Korean
+* onderek: Translations - Czech
 
 ## Other Notes ##
 
