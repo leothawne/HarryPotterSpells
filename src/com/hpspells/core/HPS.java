@@ -46,7 +46,6 @@ import com.hpspells.core.spell.SpellManager;
 import com.hpspells.core.spell.interfaces.Craftable;
 import com.hpspells.core.util.MetricStatistics;
 import com.hpspells.core.util.ReflectionsReplacement;
-import com.hpspells.core.util.SVPBypass;
 
 public class HPS extends JavaPlugin {
     public static HPS instance;
@@ -147,12 +146,9 @@ public class HPS extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new Listeners(this), this);
             getServer().getPluginManager().registerEvents(new MetricStatistics(), this);
 
-            // Hacky command map stuff
+            // Hacky command map stuff - Adding commands without using plugin.yml
             try {
-                Class<?> craftServer = SVPBypass.getCurrentCBClass("CraftServer");
-                if (craftServer == null)
-                    throw new Throwable("Computer says no");
-                Field f = craftServer.getDeclaredField("commandMap");
+                Field f = getServer().getClass().getDeclaredField("commandMap");
                 f.setAccessible(true);
                 commandMap = (CommandMap) f.get(getServer());
             } catch (Throwable e) {
