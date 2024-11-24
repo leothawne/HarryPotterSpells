@@ -245,7 +245,7 @@ public class HPS extends JavaPlugin {
             } ));
             
             // Language used
-            metrics.addCustomChart(new Metrics.SimplePie("Language", () -> Language.getLanuage(getConfig().getString("language")).toString()));
+            metrics.addCustomChart(new Metrics.SimplePie("Language", () -> Language.getLanguage(getConfig().getString("language")).toString()));
         } catch (Exception e) {
             PM.log(Level.WARNING, Localisation.getTranslation("errPluginMetrics"));
             PM.debug(e);
