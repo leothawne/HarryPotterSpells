@@ -35,6 +35,7 @@ To contribute to HarryPotterSpells take a look at our [Contributing file](https:
 * [yebanme](https://github.com/yebanme): Translations - Chinese
 * Park JiHan: Translations - Korean
 * onderek: Translations - Czech
+* EMP: Translations - Norwegian
 
 ## Other Notes ##
 
