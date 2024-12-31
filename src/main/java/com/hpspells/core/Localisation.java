@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.channels.Channels;
@@ -60,7 +61,7 @@ public class Localisation {
         this.registerLang(Language.CHINESE, new File(langFolder, "zh-chinese.properties"));
 		this.registerLang(Language.PORTUGUESE, new File(langFolder, "br-portuguese.properties"));
         if (loadDefaultLang())
-        	this.loadLang(Language.getLanuage(HPS.getConfig().getString("language")));
+        	this.loadLang(Language.getLanguage(HPS.getConfig().getString("language")));
     }
     
     /**
@@ -107,12 +108,11 @@ public class Localisation {
      * 
      * @return true if default language was loaded
      */
-    @SuppressWarnings("deprecation")
 	private boolean loadDefaultLang() {
     	try {
     		if (!new File(this.langFolder, "us-english.properties").exists()) {
     			HPS.PM.log(Level.INFO, "Attempting to download us-english.properties ...");
-    			URL url = new URL("https://raw.githubusercontent.com/HarryPotterSpells/HarryPotterSpells/master/src/us-english.properties");
+    			URL url = new URI("https://raw.githubusercontent.com/leothawne/HarryPotterSpells/master/src/main/resources/us-english.properties").toURL();
     			URLConnection urlc = url.openConnection();
     			ReadableByteChannel rbc = Channels.newChannel(urlc.getInputStream());
     			FileOutputStream fos = new FileOutputStream(this.langFolder + File.separator + "us-english.properties");
@@ -266,7 +266,7 @@ public class Localisation {
     	 * @param name The configuration language name
     	 * @return Enum of language. ENGLISH if no matches found
     	 */
-    	public static Language getLanuage(String name) {
+    	public static Language getLanguage(String name) {
     		if (name.equalsIgnoreCase("nl-dutch")) {
     			return DUTCH;
     		} else if (name.equalsIgnoreCase("de-german")) {
