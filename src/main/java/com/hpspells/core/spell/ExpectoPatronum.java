@@ -1,5 +1,8 @@
 package com.hpspells.core.spell;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.Color;
 import org.bukkit.Particle;
 import org.bukkit.Particle.DustOptions;
@@ -25,7 +28,12 @@ public class ExpectoPatronum extends Spell {
     public ExpectoPatronum(HPS instance) {
         super(instance);
     }
-
+    
+    private List<EntityType> allowedEntities = Arrays.asList(EntityType.PHANTOM,
+    		EntityType.VEX,
+    		EntityType.WARDEN,
+    		EntityType.GHAST);
+    
     public boolean cast(final Player p) {
         HPS.SpellTargeter.register(p, new SpellHitEvent() {
 
@@ -36,8 +44,7 @@ public class ExpectoPatronum extends Spell {
 
             @Override
             public void hitEntity(LivingEntity entity) {
-                EntityType e = EntityType.PHANTOM;
-                if (entity.getType().equals(e)) {
+                if (checkEntity(entity.getType())) {
                     Integer damage = (Integer) getConfig("damage", 5);
                     Double velocity = handleDouble(getConfig("velocity", 3.0), 3.0);
                     entity.damage(damage);
@@ -47,5 +54,10 @@ public class ExpectoPatronum extends Spell {
 
         }, 1, 0.5, 2, new HPSParticle(Particle.CLOUD, new DustOptions(Color.WHITE, 1)));
         return true;
+    }
+    
+    private boolean checkEntity(EntityType e) {
+    	for(EntityType et : allowedEntities) if(e.equals(et)) return true;
+    	return false;
     }
 }

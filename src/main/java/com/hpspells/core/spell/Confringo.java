@@ -22,7 +22,7 @@ public class Confringo extends Spell {
         Fireball fb = p.launchProjectile(Fireball.class);
         fb.setShooter(p);
         fb.setYield(2);
-        fb.setBounce(false);
+        //fb.setBounce(false);
         return true;
     }
 

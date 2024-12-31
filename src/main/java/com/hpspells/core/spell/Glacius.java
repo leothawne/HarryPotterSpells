@@ -1,15 +1,21 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
-import com.hpspells.core.SpellTargeter.SpellHitEvent;
-import com.hpspells.core.spell.Spell.SpellInfo;
-import org.bukkit.*;
+import java.util.HashMap;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Effect;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.InventoryHolder;
 
-import java.util.HashMap;
+import com.hpspells.core.HPS;
+import com.hpspells.core.SpellTargeter.SpellHitEvent;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
 @SpellInfo(
         name = "Glacius",
@@ -49,10 +55,7 @@ public class Glacius extends Spell {
                 if (entity instanceof Player) {
                 	Player tarPlayer = (Player) entity;
 
-                	p.getWorld().playSound(p, "mdc_let_it_go", SoundCategory.AMBIENT, 1.0f, 1.0f);
-                	tarPlayer.getWorld().playSound(tarPlayer, "mdc_let_it_go", SoundCategory.AMBIENT, 1.0f, 1.0f);
-                	
-                    World world = tarPlayer.getWorld();
+                	World world = tarPlayer.getWorld();
                     double playerX = Math.round(tarPlayer.getLocation().getBlockX() - .5) + .5;
                     double playerY = tarPlayer.getLocation().getBlockY();
                     double playerZ = Math.round(tarPlayer.getLocation().getBlockZ() - .5) + .5;
@@ -69,16 +72,20 @@ public class Glacius extends Spell {
                     };
 
                     final Location top = tarPlayer.getLocation().add(0, 2, 0);
-                    blocks.put(top, top.getBlock().getType());
-                    top.getBlock().setType(Material.ICE);
-
+                    if(!(top.getBlock().getState() instanceof InventoryHolder)) {
+                    	blocks.put(top, top.getBlock().getType());
+                        top.getBlock().setType(Material.ICE);
+                    }
+                    
                     for (Location locs : locations) {
                         for (BlockFace bf : surroundings) {
 
                             final Block relative = locs.getBlock().getRelative(bf, 1);
 
-                            blocks.put(relative.getLocation(), relative.getType());
-                            relative.setType(Material.ICE);
+                            if(!(relative.getState() instanceof InventoryHolder)) {
+                            	blocks.put(relative.getLocation(), relative.getType());
+                                relative.setType(Material.ICE);
+                            }
 
                         }
 
@@ -91,15 +98,19 @@ public class Glacius extends Spell {
                                 for (BlockFace bf : surroundings) {
                                     final Block relative = locs.getBlock().getRelative(bf, 1);
 
-                                    relative.setType(blocks.get(relative.getLocation()));
-                                    blocks.remove(relative.getLocation());
+                                    if(blocks.containsKey(relative.getLocation())) {
+	                                    relative.setType(blocks.get(relative.getLocation()));
+	                                    blocks.remove(relative.getLocation());
+                                    }
 
                                 }
 
                             }
 
-                            top.getBlock().setType(blocks.get(top));
-                            blocks.remove(top);
+                            if(blocks.containsKey(top)) {
+	                            top.getBlock().setType(blocks.get(top));
+	                            blocks.remove(top);
+                            }
 
                         }
 

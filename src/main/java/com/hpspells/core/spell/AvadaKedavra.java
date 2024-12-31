@@ -2,7 +2,6 @@ package com.hpspells.core.spell;
 
 import org.bukkit.Color;
 import org.bukkit.Particle;
-import org.bukkit.SoundCategory;
 import org.bukkit.Particle.DustOptions;
 import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
@@ -28,12 +27,9 @@ public class AvadaKedavra extends Spell {
 
     public boolean cast(final Player p) {
         HPS.SpellTargeter.register(p, new SpellHitEvent() {
-            @Override
+			@Override
             public void hitEntity(LivingEntity entity) {
-            	p.getWorld().playSound(p, "mdc_avada_kedavra", SoundCategory.AMBIENT, 1.0f, 1.0f);
-            	entity.getWorld().playSound(entity, "mdc_avada_kedavra", SoundCategory.AMBIENT, 1.0f, 1.0f);
-            	entity.damage(entity.getHealth() * 2);
-                //entity.setHealth(0);
+            	entity.setHealth(0);
             }
 
             @Override

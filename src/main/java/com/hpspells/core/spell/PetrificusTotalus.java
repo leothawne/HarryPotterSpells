@@ -3,6 +3,7 @@ package com.hpspells.core.spell;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.block.Block;
@@ -44,19 +45,17 @@ public class PetrificusTotalus extends Spell implements Listener {
             public void hitEntity(LivingEntity entity) {
                 if (entity instanceof Player) {
                     final Player target = (Player) entity;
-                    players.add(target.getName());
-                    /*long duration = getTime("duration", 600l);
+                   if(!players.contains(target.getName()))  players.add(target.getName());
+                    long duration = getTime("duration", 600l);
 
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(HPS, new Runnable() {
 
                         @Override
                         public void run() {
-                            if (players.contains(target.getName())) {
-                                players.remove(target.getName());
-                            }
+                            if (players.contains(target.getName()))  players.remove(target.getName());
                         }
 
-                    }, duration);*/
+                    }, duration);
 
                     Location loc = new Location(target.getWorld(), target.getLocation().getBlockX(), target.getLocation().getBlockY() + 1, target.getLocation().getBlockZ());
                     target.getWorld().createExplosion(loc, 0F);

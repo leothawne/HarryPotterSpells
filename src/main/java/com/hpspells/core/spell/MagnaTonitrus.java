@@ -1,8 +1,8 @@
 package com.hpspells.core.spell;
 
 import org.bukkit.Effect;
+import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -30,14 +30,10 @@ public class MagnaTonitrus extends Spell {
 
             @Override
             public void hitBlock(Block block) {
-                if (block.getType() != Material.AIR) {
-                	p.getWorld().playSound(p, "mdc_pega_a_visao", SoundCategory.AMBIENT, 1.0f, 1.0f);
-                	block.getWorld().playSound(block.getLocation(), "mdc_pega_a_visao", SoundCategory.AMBIENT, 1.0f, 1.0f);
+                if (!block.getType().equals(Material.AIR) && !block.getType().equals(Material.CAVE_AIR) && !block.getType().equals(Material.VOID_AIR)) {
                     block.getWorld().strikeLightningEffect(block.getLocation());
-                    /*Block above = new Location(block.getWorld(), block.getX(), block.getY() + 1, block.getZ()).getBlock();
-                    if (above.getType() == Material.FIRE) {
-                        above.setType(Material.AIR);
-                    }*/
+                    Block above = new Location(block.getWorld(), block.getX(), block.getY() + 1, block.getZ()).getBlock();
+                    if (above.getType().equals(Material.FIRE)) above.setType(Material.AIR);
                 }
             }
 

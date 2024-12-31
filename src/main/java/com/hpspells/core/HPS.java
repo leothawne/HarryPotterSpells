@@ -317,6 +317,7 @@ public class HPS extends JavaPlugin {
      * @param clazz a class that extends {@code CommandExecutor}
      * @return {@code true} if the command was added successfully
      */
+	@SuppressWarnings("deprecation")
 	public boolean addHackyCommand(Class<? extends HCommandExecutor> clazz) {
         if (!clazz.isAnnotationPresent(CommandInfo.class)) {
             PM.log(Level.INFO, Localisation.getTranslation("errAddCommandMapAnnotation", clazz.getSimpleName()));
@@ -356,6 +357,7 @@ public class HPS extends JavaPlugin {
             this.HPS = instance;
         }
 
+		@SuppressWarnings("deprecation")
 		@Override
         public boolean execute(CommandSender sender, String commandLabel, String[] args) {
             String s = sender instanceof Player ? "/" : "";
