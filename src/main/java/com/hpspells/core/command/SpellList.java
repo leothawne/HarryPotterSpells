@@ -1,9 +1,8 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HarryPotterSpells;
-import com.hpspells.core.configuration.ConfigurationManager.ConfigurationType;
-import com.hpspells.core.configuration.PlayerSpellConfig;
-import com.hpspells.core.spell.Spell;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -12,8 +11,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
-import java.util.SortedSet;
-import java.util.TreeSet;
+import com.hpspells.core.HarryPotterSpells;
+import com.hpspells.core.configuration.ConfigurationManager.ConfigurationType;
+import com.hpspells.core.configuration.PlayerSpellConfig;
+import com.hpspells.core.spell.Spell;
 
 @CommandInfo(name = "spelllist", description = "cmdSplDescription", usage = "<command> [player|me]", permissionDefault = "true", aliases = "sl")
 public class SpellList extends HCommandExecutor {
@@ -25,7 +26,6 @@ public class SpellList extends HCommandExecutor {
 
     public static final Permission LIST_OTHERS = new Permission("harrypotterspells.list.others", PermissionDefault.OP);
 
-	@SuppressWarnings("deprecation")
 	@Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length > 1)
