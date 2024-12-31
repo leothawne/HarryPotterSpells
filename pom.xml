@@ -61,6 +61,14 @@
 					<include>plugin.yml</include>
 				</includes>
 		    </resource>
+		    <resource>
+		        <targetPath>${basedir}/target/classes</targetPath>
+		        <directory>${basedir}/src/main/resources</directory>
+		        <filtering>false</filtering>
+		        <excludes>
+					<exclude>plugin.yml</exclude>
+				</excludes>
+		    </resource>
 		</resources>
 	</build>
 	<repositories>
