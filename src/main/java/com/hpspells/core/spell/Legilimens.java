@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
@@ -9,16 +9,15 @@ import org.bukkit.inventory.Inventory;
 
 import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Legilimens",
         description = "descLegilimens",
         range = 50,
         goThroughWalls = false,
         cooldown = 180
-)*/
-
+)
 public class Legilimens extends Spell {
 
     public Legilimens(HarryPotterSpells instance) {

@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -10,16 +10,16 @@ import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Aguamenti",
         description = "descAguamenti",
         range = 50,
         goThroughWalls = false,
         cooldown = 90,
         icon = Material.WATER
-)*/
+)
 public class Aguamenti extends Spell {
 
     public Aguamenti(HarryPotterSpells instance) {

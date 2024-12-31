@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,15 +16,15 @@ import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Tree",
         description = "descTree",
         range = 50,
         goThroughWalls = false,
         cooldown = 105
-)*/
+)
 public class TreeSpell extends Spell {
 	
 	private List<Material> logsList = new ArrayList<>(Arrays.asList(

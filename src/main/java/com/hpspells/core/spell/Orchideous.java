@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -9,16 +9,16 @@ import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Orchideous",
         description = "descOrchideous",
         range = 50,
         goThroughWalls = false,
         cooldown = 45,
         icon = Material.POPPY
-)*/
+)
 public class Orchideous extends Spell {
 
     public Orchideous(HarryPotterSpells instance) {

@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import java.util.Set;
 
@@ -9,16 +9,16 @@ import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.api.SpellBookRecipe;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.spell.interfaces.Craftable;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Time",
         description = "descTime",
         range = 0,
         goThroughWalls = false,
         cooldown = 600
-)*/
+)
 public class TimeSpell extends Spell implements Craftable {
     private SpellBookRecipe recipe = null;
 

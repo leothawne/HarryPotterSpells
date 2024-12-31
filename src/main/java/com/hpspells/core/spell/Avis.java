@@ -1,4 +1,4 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import java.util.Random;
 
@@ -8,15 +8,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 import com.hpspells.core.HarryPotterSpells;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Avis",
         description = "descAvis",
         range = 0,
         goThroughWalls = false,
         cooldown = 300
-)*/
+)
 public class Avis extends Spell {
 
     public Avis(HarryPotterSpells instance) {

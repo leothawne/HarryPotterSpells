@@ -1,16 +1,16 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Arrow",
         description = "descArrow",
         goThroughWalls = false,
         cooldown = 90
-)*/
+)
 public class Arrow extends Spell {
 
     public Arrow(HarryPotterSpells instance) {

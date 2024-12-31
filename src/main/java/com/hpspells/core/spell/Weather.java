@@ -1,18 +1,18 @@
-package com.hpspells.core.disabledspell;
+package com.hpspells.core.spell;
 
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 
 import com.hpspells.core.HarryPotterSpells;
-import com.hpspells.core.spell.Spell;
+import com.hpspells.core.spell.Spell.SpellInfo;
 
-/*@SpellInfo(
+@SpellInfo(
         name = "Weather",
         description = "descWeather",
         range = 0,
         goThroughWalls = false,
         cooldown = 600
-)*/
+)
 public class Weather extends Spell {
 
     public Weather(HarryPotterSpells instance) {
