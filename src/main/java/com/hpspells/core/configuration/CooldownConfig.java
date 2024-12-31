@@ -3,7 +3,7 @@ package com.hpspells.core.configuration;
 import java.io.File;
 import java.io.InputStream;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 public class CooldownConfig extends CustomConfiguration {
 	
@@ -20,21 +20,21 @@ public class CooldownConfig extends CustomConfiguration {
 	/**
      * Constructs a new {@link CooldownConfig} without copying any defaults
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      */
-	public CooldownConfig(HPS instance, File file) {
+	public CooldownConfig(HarryPotterSpells instance, File file) {
 		super(instance, file);
 	}
 	
 	/**
      * Constructs a new {@link CustomConfiguration}, copying defaults from an {@link InputStream}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      * @param stream   an input stream to copy default configuration from
      */
-	public CooldownConfig(HPS instance, File file, InputStream stream) {
+	public CooldownConfig(HarryPotterSpells instance, File file, InputStream stream) {
 		super(instance, file, stream, header);
 	}
 	

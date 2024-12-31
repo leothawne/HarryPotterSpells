@@ -30,7 +30,7 @@ import com.hpspells.core.spell.Colloportus;
 import com.hpspells.core.spell.Spell;
 
 public class Listeners implements Listener {
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     
     private List<Material> buttonTypeList = new ArrayList<>(Arrays.asList(
     		Material.ACACIA_BUTTON,
@@ -44,7 +44,7 @@ public class Listeners implements Listener {
 
     public static final Permission CAST_SPELLS = new Permission("harrypotterspells.cast", PermissionDefault.OP);
 
-    public Listeners(HPS instance) {
+    public Listeners(HarryPotterSpells instance) {
         this.HPS = instance;
         HPS.getServer().getPluginManager().addPermission(CAST_SPELLS);
     }

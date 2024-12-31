@@ -13,7 +13,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -37,7 +37,7 @@ public class Glacius extends Spell {
             BlockFace.NORTH_WEST
     };
 
-    public Glacius(HPS instance) {
+    public Glacius(HarryPotterSpells instance) {
         super(instance);
     }
 

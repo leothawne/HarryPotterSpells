@@ -16,7 +16,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.material.Door;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.util.BlockUtils;
@@ -65,7 +65,7 @@ public class Colloportus extends Spell {
     ));
     
 
-    public Colloportus(HPS instance) {
+    public Colloportus(HarryPotterSpells instance) {
         super(instance);
     }
 

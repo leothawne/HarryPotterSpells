@@ -7,7 +7,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell;
 
@@ -21,7 +21,7 @@ import com.hpspells.core.spell.Spell;
 )*/
 public class Orchideous extends Spell {
 
-    public Orchideous(HPS instance) {
+    public Orchideous(HarryPotterSpells instance) {
         super(instance);
     }
 

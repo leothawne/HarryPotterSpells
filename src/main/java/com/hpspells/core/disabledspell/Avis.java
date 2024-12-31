@@ -7,7 +7,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell;
 
 /*@SpellInfo(
@@ -19,7 +19,7 @@ import com.hpspells.core.spell.Spell;
 )*/
 public class Avis extends Spell {
 
-    public Avis(HPS instance) {
+    public Avis(HarryPotterSpells instance) {
         super(instance);
     }
 

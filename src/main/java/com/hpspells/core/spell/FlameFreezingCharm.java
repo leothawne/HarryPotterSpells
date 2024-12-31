@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -16,7 +16,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class FlameFreezingCharm extends Spell {
 
-    public FlameFreezingCharm(HPS instance) {
+    public FlameFreezingCharm(HarryPotterSpells instance) {
         super(instance);
     }
 

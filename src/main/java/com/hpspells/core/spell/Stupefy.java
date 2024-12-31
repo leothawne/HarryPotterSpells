@@ -10,7 +10,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.util.HPSParticle;
@@ -24,7 +24,7 @@ import com.hpspells.core.util.HPSParticle;
 )
 public class Stupefy extends Spell {
 
-    public Stupefy(HPS instance) {
+    public Stupefy(HarryPotterSpells instance) {
         super(instance);
     }
 

@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -25,7 +25,7 @@ import java.util.List;
 public class Spongify extends Spell implements Listener {
     private List<String> players = new ArrayList<String>();
 
-    public Spongify(HPS instance) {
+    public Spongify(HarryPotterSpells instance) {
         super(instance);
     }
 

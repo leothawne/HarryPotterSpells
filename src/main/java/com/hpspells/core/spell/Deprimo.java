@@ -14,7 +14,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -28,7 +28,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 public class Deprimo extends Spell implements Listener {
     private static List<String> players = new ArrayList<String>();
 
-    public Deprimo(HPS instance) {
+    public Deprimo(HarryPotterSpells instance) {
         super(instance);
     }
 

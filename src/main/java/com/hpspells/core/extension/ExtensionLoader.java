@@ -15,16 +15,16 @@ import java.util.logging.Level;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 public class ExtensionLoader {
 
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     private File directory;
     private ArrayList<File> files;
     private final List<URLClassLoader> loaders = new CopyOnWriteArrayList<URLClassLoader>();
 
-    public ExtensionLoader(final HPS HPS, final File directory) {
+    public ExtensionLoader(final HarryPotterSpells HPS, final File directory) {
         this.HPS = HPS;
         this.directory = directory;
     }
@@ -86,7 +86,7 @@ public class ExtensionLoader {
         return null;
     }
 
-    public HPS getPlugin() {
+    public HarryPotterSpells getPlugin() {
         return HPS;
     }
 

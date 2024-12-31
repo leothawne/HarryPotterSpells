@@ -8,7 +8,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell;
 import com.hpspells.core.util.HPSParticle;
@@ -23,7 +23,7 @@ import com.hpspells.core.util.HPSParticle;
 )*/
 public class Duro extends Spell {
 
-    public Duro(HPS instance) {
+    public Duro(HarryPotterSpells instance) {
         super(instance);
     }
 

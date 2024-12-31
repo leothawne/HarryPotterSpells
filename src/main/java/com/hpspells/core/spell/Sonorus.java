@@ -12,7 +12,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
 @SpellInfo(
@@ -25,7 +25,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 public class Sonorus extends Spell implements Listener {
     private static List<UUID> players = new ArrayList<UUID>();
 
-    public Sonorus(HPS instance) {
+    public Sonorus(HarryPotterSpells instance) {
         super(instance);
     }
 

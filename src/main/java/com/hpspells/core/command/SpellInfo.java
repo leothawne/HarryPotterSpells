@@ -1,13 +1,13 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
 @CommandInfo(name = "spellinfo", description = "cmdSpiDescription", usage = "<command> <spell>", permissionDefault = "true", aliases = "si")
 public class SpellInfo extends HCommandExecutor {
 
-    public SpellInfo(HPS instance) {
+    public SpellInfo(HarryPotterSpells instance) {
         super(instance);
     }
 

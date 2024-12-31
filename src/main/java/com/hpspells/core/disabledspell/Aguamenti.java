@@ -8,7 +8,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell;
 
@@ -22,7 +22,7 @@ import com.hpspells.core.spell.Spell;
 )*/
 public class Aguamenti extends Spell {
 
-    public Aguamenti(HPS instance) {
+    public Aguamenti(HarryPotterSpells instance) {
         super(instance);
     }
 

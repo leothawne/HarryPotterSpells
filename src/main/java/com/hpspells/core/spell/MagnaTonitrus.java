@@ -7,7 +7,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -21,7 +21,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 
 public class MagnaTonitrus extends Spell {
 
-    public MagnaTonitrus(HPS instance) {
+    public MagnaTonitrus(HarryPotterSpells instance) {
         super(instance);
     }
 

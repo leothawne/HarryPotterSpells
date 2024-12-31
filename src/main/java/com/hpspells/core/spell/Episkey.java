@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -20,7 +20,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 )
 public class Episkey extends Spell {
 
-    public Episkey(HPS instance) {
+    public Episkey(HarryPotterSpells instance) {
         super(instance);
     }
 

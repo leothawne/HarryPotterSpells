@@ -13,7 +13,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -27,7 +27,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 public class PetrificusTotalus extends Spell implements Listener {
     public static List<String> players = new ArrayList<String>();
 
-    public PetrificusTotalus(HPS instance) {
+    public PetrificusTotalus(HarryPotterSpells instance) {
         super(instance);
     }
 

@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 )
 public class Confringo extends Spell {
 
-    public Confringo(HPS instance) {
+    public Confringo(HarryPotterSpells instance) {
         super(instance);
     }
 

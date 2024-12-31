@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -27,7 +27,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 )
 public class Expelliarmus extends Spell {
 
-    public Expelliarmus(HPS instance) {
+    public Expelliarmus(HarryPotterSpells instance) {
         super(instance);
     }
 

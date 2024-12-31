@@ -21,7 +21,7 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
 import com.google.common.collect.Iterables;
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.api.event.SpellEvent;
 import com.hpspells.core.api.event.SpellPostCastEvent;
 import com.hpspells.core.api.event.SpellPreCastEvent;
@@ -45,16 +45,16 @@ public class SpellManager {
     };
     private SortedSet<Spell> spellList = new TreeSet<Spell>(spellComparator);
     private Map<String, Integer> currentSpell = new HashMap<String, Integer>();
-    private HPS HPS;
+    private HarryPotterSpells HPS;
 
     public final Permission NO_COOLDOWN_ALL_1 = new Permission("harrypotterspells.nocooldown", PermissionDefault.OP), NO_COOLDOWN_ALL_2 = new Permission("harrypotterspells.nocooldown.*");
 
     /**
      * Constructs the {@link SpellManager}, adding all core spells to the Spell List
      *
-     * @param plugin an instance of {@link HPS}
+     * @param plugin an instance of {@link HarryPotterSpells}
      */
-    public SpellManager(HPS instance) {
+    public SpellManager(HarryPotterSpells instance) {
         this.HPS = instance;
         HPS.getServer().getPluginManager().addPermission(NO_COOLDOWN_ALL_1);
         HPS.getServer().getPluginManager().addPermission(NO_COOLDOWN_ALL_2);
@@ -66,7 +66,7 @@ public class SpellManager {
 
                 Spell spell;
                 try {
-                    spell = (Spell) clazz.getConstructor(HPS.class).newInstance(HPS);
+                    spell = (Spell) clazz.getConstructor(HarryPotterSpells.class).newInstance(HPS);
 
                     if (Listener.class.isAssignableFrom(clazz)) {
                         HPS.getServer().getPluginManager().registerEvents((Listener) spell, HPS);

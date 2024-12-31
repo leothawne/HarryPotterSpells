@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Bukkit;
@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class Silencio extends Spell implements Listener {
 
-    public Silencio(HPS instance) {
+    public Silencio(HarryPotterSpells instance) {
         super(instance);
     }
 

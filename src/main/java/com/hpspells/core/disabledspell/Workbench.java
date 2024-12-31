@@ -2,7 +2,7 @@ package com.hpspells.core.disabledspell;
 
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell;
 
 /*@SpellInfo(
@@ -15,7 +15,7 @@ import com.hpspells.core.spell.Spell;
 
 public class Workbench extends Spell {
 
-    public Workbench(HPS instance) {
+    public Workbench(HarryPotterSpells instance) {
         super(instance);
     }
 

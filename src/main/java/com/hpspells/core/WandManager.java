@@ -26,15 +26,15 @@ import com.hpspells.core.util.MiscUtilities;
  * This class manages the wand
  */
 public class WandManager {
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     private List<Material> wandTypes = new ArrayList<Material>();
 
     /**
      * Constructs a new {@link WandManager}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      */
-    public WandManager(HPS instance) {
+    public WandManager(HarryPotterSpells instance) {
         this.HPS = instance;
         HPS.getConfig().getStringList("wand.types").forEach(string -> {
             Material material = Material.matchMaterial(string);

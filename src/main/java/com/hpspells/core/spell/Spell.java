@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.configuration.ConfigurationManager.ConfigurationType;
 import com.hpspells.core.configuration.PlayerSpellConfig;
 import com.hpspells.core.util.MiscUtilities;
@@ -23,9 +23,9 @@ import java.util.logging.Level;
  * An abstract class representing a Spell
  */
 public abstract class Spell {
-    public HPS HPS;
+    public HarryPotterSpells HPS;
 
-    public Spell(HPS instance) {
+    public Spell(HarryPotterSpells instance) {
         this.HPS = instance;
     }
 

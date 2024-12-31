@@ -16,7 +16,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockExplodeEvent;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -30,7 +30,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 public class Reducto extends Spell implements Listener {
     private List<Block> sourceBlockList = new ArrayList<>();
 
-    public Reducto(HPS instance) {
+    public Reducto(HarryPotterSpells instance) {
         super(instance);
     }
 

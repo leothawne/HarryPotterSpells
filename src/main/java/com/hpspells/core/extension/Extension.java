@@ -17,13 +17,13 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 /**
  * Represents an Extension to HarryPotterSpells
  */
 public class Extension implements Listener {
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     private String name, description, authors, version;
     private Logger logger;
     private File dataFolder, configFile;
@@ -37,7 +37,7 @@ public class Extension implements Listener {
      * @param instance The HPS instance
      * @param description The extension description file
      */
-    void init(URLClassLoader loader, HPS instance, YamlConfiguration description) throws IOException {
+    void init(URLClassLoader loader, HarryPotterSpells instance, YamlConfiguration description) throws IOException {
         this.classLoader = loader;
         this.HPS = instance;
         this.name = description.getString("name");

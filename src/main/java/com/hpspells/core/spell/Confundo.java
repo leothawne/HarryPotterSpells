@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -21,7 +21,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 )
 public class Confundo extends Spell {
 
-    public Confundo(HPS instance) {
+    public Confundo(HarryPotterSpells instance) {
         super(instance);
     }
 

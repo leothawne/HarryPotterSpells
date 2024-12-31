@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.util.FireworkEffectPlayer;
 import org.bukkit.Color;
@@ -18,7 +18,7 @@ import java.util.logging.Level;
 )
 public class HomenumRevelio extends Spell {
 
-    public HomenumRevelio(HPS instance) {
+    public HomenumRevelio(HarryPotterSpells instance) {
         super(instance);
     }
 

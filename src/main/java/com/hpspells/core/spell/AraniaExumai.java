@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.util.HPSParticle;
@@ -20,7 +20,7 @@ import org.bukkit.entity.*;
 )
 public class AraniaExumai extends Spell {
 
-    public AraniaExumai(HPS instance) {
+    public AraniaExumai(HarryPotterSpells instance) {
         super(instance);
     }
 

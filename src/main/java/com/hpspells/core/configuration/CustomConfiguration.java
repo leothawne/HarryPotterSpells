@@ -1,6 +1,6 @@
 package com.hpspells.core.configuration;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -17,28 +17,28 @@ import java.util.logging.Level;
 public class CustomConfiguration {
     private FileConfiguration fileConfiguration = null;
     private File file = null;
-    private HPS HPS;
+    private HarryPotterSpells HPS;
 
     /**
      * Constructs a new {@link CustomConfiguration} without copying any defaults
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      */
-    public CustomConfiguration(HPS instance, File file) {
+    public CustomConfiguration(HarryPotterSpells instance, File file) {
         this(instance, file, null, null);
     }
 
     /**
      * Constructs a new {@link CustomConfiguration}, copying defaults from an {@link InputStream}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      * @param stream   an input stream to copy default configuration from
      * @param header   String array of text as header
      */
 	@SuppressWarnings("deprecation")
-	public CustomConfiguration(HPS instance, File file, InputStream stream, String[] header) {
+	public CustomConfiguration(HarryPotterSpells instance, File file, InputStream stream, String[] header) {
         this.HPS = instance;
         this.file = file;
         this.fileConfiguration = YamlConfiguration.loadConfiguration(file);

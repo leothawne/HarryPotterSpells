@@ -1,6 +1,6 @@
 package com.hpspells.core.configuration;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,15 +24,15 @@ public class ConfigurationManager {
 		"Only enable if you want to enable debugging mode"
 	};
 	
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     private Map<ConfigurationType, CustomConfiguration> configurationMap = new HashMap<ConfigurationType, CustomConfiguration>();
 
     /**
      * Constructs a new {@link ConfigurationManager}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      */
-    public ConfigurationManager(HPS instance) {
+    public ConfigurationManager(HarryPotterSpells instance) {
         this.HPS = instance;
         configurationMap.put(ConfigurationType.COOLDOWN, new CooldownConfig(HPS, new File(HPS.getDataFolder(), "cooldown.yml"), HPS.getResource("cooldown.yml")));
         configurationMap.put(ConfigurationType.PLAYER_SPELL, new PlayerSpellConfig(HPS, new File(HPS.getDataFolder(), "PlayerSpellConfig.yml"), HPS.getResource("PlayerSpellConfig.yml")));

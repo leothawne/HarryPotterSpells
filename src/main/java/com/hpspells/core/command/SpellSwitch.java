@@ -1,6 +1,6 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 @CommandInfo(name = "spellswitch", description = "cmdSpsDescription", usage = "<command> <spell>", permissionDefault = "true", aliases="ss")
 public class SpellSwitch extends HCommandExecutor {
 
-    public SpellSwitch(HPS instance) {
+    public SpellSwitch(HarryPotterSpells instance) {
         super(instance);
     }
 

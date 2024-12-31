@@ -1,6 +1,6 @@
 package com.hpspells.core.configuration;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.io.File;
@@ -17,21 +17,21 @@ public class PlayerSpellConfig extends CustomConfiguration {
     /**
      * Constructs a new {@link PlayerSpellConfig} without copying any defaults
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      */
-    public PlayerSpellConfig(HPS instance, File file) {
+    public PlayerSpellConfig(HarryPotterSpells instance, File file) {
         super(instance, file);
     }
 
     /**
      * Constructs a new {@link CustomConfiguration}, copying defaults from an {@link InputStream}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      * @param file     where to store the custom configuration
      * @param stream   an input stream to copy default configuration from
      */
-    public PlayerSpellConfig(HPS instance, File file, InputStream stream) {
+    public PlayerSpellConfig(HarryPotterSpells instance, File file, InputStream stream) {
         super(instance, file, stream, null);
     }
 

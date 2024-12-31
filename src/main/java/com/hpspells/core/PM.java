@@ -17,16 +17,16 @@ import java.util.logging.Logger;
  */
 public class PM {
     private Logger log;
-    private HPS HPS;
+    private HarryPotterSpells HPS;
     private String tag;
     private ChatColor info, warning;
 
     /**
      * Constructs an instance of {@link PM}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      */
-    public PM(HPS instance) {
+    public PM(HarryPotterSpells instance) {
         this.HPS = instance;
         this.log = HPS.getLogger();
         this.tag = ChatColor.translateAlternateColorCodes('&', HPS.getConfig().getString("messaging.tag", "&f[&6HarryPotterSpells&f] "));

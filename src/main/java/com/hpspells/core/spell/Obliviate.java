@@ -9,7 +9,7 @@ import com.hpspells.core.SpellTargeter.SpellHitEvent;
 
 public class Obliviate extends Spell {
 
-    public Obliviate(com.hpspells.core.HPS instance) {
+    public Obliviate(com.hpspells.core.HarryPotterSpells instance) {
         super(instance);
     }
 

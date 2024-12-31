@@ -1,6 +1,6 @@
 package com.hpspells.core.api;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell;
 import com.hpspells.core.util.MiscUtilities;
 
@@ -22,7 +22,7 @@ public class SpellBookRecipe implements Recipe {
     public static final String[] RANDOM_AUTHORS = new String[]{"Merwyn the Malicious", "Delfina Crimp", "Felix Summerbee", "Jarleth Hobart", "Mnemone Radford", "Urquhart Rackharrow", "Orabella Nuttley", "Levina Monkstanley", "Elliot Smethwyck", "Basil Horton", "Randolph Keitch", "Miranda Goshawk", "Tom Riddle", "Severus Snape", "Fred Weasley", "George Weasley", "Unknown"};
 
     private ShapedRecipe recipe;
-    private HPS HPS;
+    private HarryPotterSpells HPS;
 
     /**
      * Constructs a new {@link SpellBookRecipe}
@@ -30,7 +30,7 @@ public class SpellBookRecipe implements Recipe {
      * @param spell the {@link Spell} that this recipe will create a book for
      * @param if    {@code true} the recipe will be shapeless
      */
-    public SpellBookRecipe(HPS instance, Spell spell) {
+    public SpellBookRecipe(HarryPotterSpells instance, Spell spell) {
         this.HPS = instance;
 
         ItemStack stack = new ItemStack(Material.WRITTEN_BOOK);

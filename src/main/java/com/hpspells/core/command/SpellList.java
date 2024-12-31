@@ -1,6 +1,6 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.configuration.ConfigurationManager.ConfigurationType;
 import com.hpspells.core.configuration.PlayerSpellConfig;
 import com.hpspells.core.spell.Spell;
@@ -18,7 +18,7 @@ import java.util.TreeSet;
 @CommandInfo(name = "spelllist", description = "cmdSplDescription", usage = "<command> [player|me]", permissionDefault = "true", aliases = "sl")
 public class SpellList extends HCommandExecutor {
 
-    public SpellList(HPS instance) {
+    public SpellList(HarryPotterSpells instance) {
         super(instance);
         HPS.getServer().getPluginManager().addPermission(LIST_OTHERS);
     }

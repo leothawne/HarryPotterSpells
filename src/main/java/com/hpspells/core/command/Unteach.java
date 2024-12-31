@@ -1,6 +1,6 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -12,7 +12,7 @@ import java.util.Set;
 @CommandInfo(name = "unteach", description = "cmdUntDescription", usage = "<command> <spell> [player|me]")
 public class Unteach extends HCommandExecutor {
 
-    public Unteach(HPS instance) {
+    public Unteach(HarryPotterSpells instance) {
         super(instance);
     }
 

@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 
 public class Aparecium extends Spell {
 
-    public Aparecium(HPS instance) {
+    public Aparecium(HarryPotterSpells instance) {
         super(instance);
     }
 

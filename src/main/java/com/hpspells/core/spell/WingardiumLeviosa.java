@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -22,7 +22,7 @@ import java.util.List;
 public class WingardiumLeviosa extends Spell implements Listener {
     private List<String> players = new ArrayList<String>();
 
-    public WingardiumLeviosa(HPS instance) {
+    public WingardiumLeviosa(HarryPotterSpells instance) {
         super(instance);
     }
 

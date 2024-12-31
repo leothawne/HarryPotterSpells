@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -17,7 +17,7 @@ import org.bukkit.inventory.meta.FireworkMeta;
 )
 public class Morsmordre extends Spell {
 
-    public Morsmordre(HPS instance) {
+    public Morsmordre(HarryPotterSpells instance) {
         super(instance);
     }
 

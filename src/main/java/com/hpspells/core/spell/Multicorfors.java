@@ -15,7 +15,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -28,7 +28,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 )
 public class Multicorfors extends Spell {
 
-    public Multicorfors(HPS instance) {
+    public Multicorfors(HarryPotterSpells instance) {
         super(instance);
     }
 

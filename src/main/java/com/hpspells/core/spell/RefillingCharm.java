@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -17,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class RefillingCharm extends Spell {
 
-    public RefillingCharm(HPS instance) {
+    public RefillingCharm(HarryPotterSpells instance) {
         super(instance);
     }
 

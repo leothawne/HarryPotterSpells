@@ -32,14 +32,14 @@ public class Localisation {
     private File langFolder;
     //private File properties, en;
     //private boolean once = false;
-    private HPS HPS;
+    private HarryPotterSpells HPS;
 
     /**
      * Constructs the {@link Localisation} class
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      */
-    public Localisation(HPS instance) {
+    public Localisation(HarryPotterSpells instance) {
         this.HPS = instance;
         load();
     }
@@ -199,7 +199,7 @@ public class Localisation {
 
     
     private void generateFile(File file, final String lang) {
-    	InputStream stream = HPS.class.getClassLoader().getResourceAsStream(lang);
+    	InputStream stream = HarryPotterSpells.class.getClassLoader().getResourceAsStream(lang);
 //    	HPS.PM.log(Level.INFO, "URL: " + HPS.class.getClassLoader().getResource(lang) == null ? "null" : HPS.class.getClassLoader().getResource(lang).toString());
 //    	HPS.PM.log(Level.INFO, "URL: " + HPS.class.getClassLoader().getResource("/" + lang) == null ? "null" : HPS.class.getClassLoader().getResource("/" + lang).toString()); //null on windows
 //    	HPS.PM.log(Level.INFO, "URL: " + HPS.class.getResource(lang) == null ? "null" : HPS.class.getResource(lang).toString()); //null on windows

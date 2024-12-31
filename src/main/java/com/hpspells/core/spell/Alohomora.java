@@ -7,7 +7,7 @@ import org.bukkit.block.data.type.Door;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter;
 import com.hpspells.core.util.BlockUtils;
 
@@ -24,7 +24,7 @@ import com.hpspells.core.util.BlockUtils;
 )
 public class Alohomora extends Spell {
 
-    public Alohomora(HPS instance) {
+    public Alohomora(HarryPotterSpells instance) {
         super(instance);
     }
 

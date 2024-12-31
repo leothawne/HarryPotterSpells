@@ -1,8 +1,9 @@
-name: HarryPotterSpells
-main: com.hpspells.core.HPS
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
 prefix: "HPS"
-version: 1.3.1
 api-version: 1.20
 load: POSTWORLD
 authors: [nikgenic, kezz101, np98765, jacklin213, nobookie]
 website: https://github.com/leothawne/HarryPotterSpells
+main: ${project.groupId}.${project.artifactId}.${project.name}

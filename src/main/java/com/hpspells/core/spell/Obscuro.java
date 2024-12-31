@@ -11,7 +11,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import com.hpspells.core.util.MiscUtilities;
@@ -25,7 +25,7 @@ import com.hpspells.core.util.MiscUtilities;
 )
 public class Obscuro extends Spell {
 
-    public Obscuro(HPS instance) {
+    public Obscuro(HarryPotterSpells instance) {
         super(instance);
     }
 

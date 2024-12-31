@@ -6,7 +6,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -19,7 +19,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 )
 public class AlarteAscendare extends Spell {
 
-    public AlarteAscendare(HPS instance) {
+    public AlarteAscendare(HarryPotterSpells instance) {
         super(instance);
     }
 

@@ -11,14 +11,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 
 @CommandInfo(name = "wand", description = "cmdWanDescription", usage = "<command> [player|me] [material]")
 public class Wand extends HCommandExecutor {
 
     Permission perm = new Permission("harrypotterspells.wand.others", PermissionDefault.OP);
     
-    public Wand(HPS instance) {
+    public Wand(HarryPotterSpells instance) {
         super(instance);
         Bukkit.getServer().getPluginManager().addPermission(perm);
     }

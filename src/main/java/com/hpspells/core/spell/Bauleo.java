@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
 import org.bukkit.Location;
@@ -21,7 +21,7 @@ import org.bukkit.inventory.Inventory;
 )
 public class Bauleo extends Spell {
 
-    public Bauleo(HPS instance) {
+    public Bauleo(HarryPotterSpells instance) {
         super(instance);
     }
 

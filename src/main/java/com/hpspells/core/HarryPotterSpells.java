@@ -48,8 +48,8 @@ import com.hpspells.core.util.MetricStatistics;
 import com.hpspells.core.util.ReflectionsReplacement;
 import com.hpspells.core.util.SVPBypass;
 
-public class HPS extends JavaPlugin {
-    public static HPS instance;
+public class HarryPotterSpells extends JavaPlugin {
+    public static HarryPotterSpells instance;
     
     public ConfigurationManager ConfigurationManager;
     public PM PM;
@@ -334,7 +334,7 @@ public class HPS extends JavaPlugin {
         hacky.setPermission(permission);
         hacky.setPermissionMessage(Localisation.getTranslation(cmdInfo.noPermissionMessage()));
         try {
-            hacky.setExecutor(clazz.getConstructor(HPS.class).newInstance(this));
+            hacky.setExecutor(clazz.getConstructor(HarryPotterSpells.class).newInstance(this));
         } catch (Exception e) {
             PM.log(Level.WARNING, Localisation.getTranslation("errAddCommandMap", clazz.getSimpleName()));
             PM.debug(e);
@@ -350,9 +350,9 @@ public class HPS extends JavaPlugin {
      */
     private static class HackyCommand extends Command {
         private CommandExecutor executor;
-        private HPS HPS;
+        private HarryPotterSpells HPS;
 
-        public HackyCommand(HPS instance, String name, String description, String usageMessage, List<String> aliases) {
+        public HackyCommand(HarryPotterSpells instance, String name, String description, String usageMessage, List<String> aliases) {
             super(name, description, usageMessage, aliases);
             this.HPS = instance;
         }

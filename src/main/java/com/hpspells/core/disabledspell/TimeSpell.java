@@ -7,7 +7,7 @@ import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.api.SpellBookRecipe;
 import com.hpspells.core.spell.Spell;
 import com.hpspells.core.spell.interfaces.Craftable;
@@ -22,7 +22,7 @@ import com.hpspells.core.spell.interfaces.Craftable;
 public class TimeSpell extends Spell implements Craftable {
     private SpellBookRecipe recipe = null;
 
-    public TimeSpell(HPS instance) {
+    public TimeSpell(HarryPotterSpells instance) {
         super(instance);
     }
 

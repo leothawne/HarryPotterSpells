@@ -14,7 +14,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell;
 
@@ -42,7 +42,7 @@ public class TreeSpell extends Spell {
 			Material.STRIPPED_SPRUCE_LOG
     ));
 
-    public TreeSpell(HPS instance) {
+    public TreeSpell(HarryPotterSpells instance) {
         super(instance);
     }
 

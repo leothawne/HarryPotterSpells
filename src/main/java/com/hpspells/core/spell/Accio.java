@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
@@ -15,7 +15,7 @@ import org.bukkit.util.Vector;
 )
 public class Accio extends Spell {
 
-    public Accio(HPS instance) {
+    public Accio(HarryPotterSpells instance) {
         super(instance);
     }
 

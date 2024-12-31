@@ -1,6 +1,6 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.configuration.ConfigurationManager;
 import com.hpspells.core.configuration.PlayerSpellConfig;
 import com.hpspells.core.spell.Spell;
@@ -14,12 +14,12 @@ import java.util.Set;
 
 @CommandInfo(name = "teach", description = "cmdTeaDescription", usage = "<command> <spell> [player|me]")
 public class Teach extends HCommandExecutor {
-    private final HPS HPS;
+    private final HarryPotterSpells HPS;
 
     // No need to register a permission that is not granted by default
 //    private static final Permission teachKnown = new Permission("harrypotterspells.teach.known", "Restricts user to teaching only spells they know", PermissionDefault.FALSE);
 
-    public Teach(HPS instance) {
+    public Teach(HarryPotterSpells instance) {
         super(instance);
         HPS = instance;
 

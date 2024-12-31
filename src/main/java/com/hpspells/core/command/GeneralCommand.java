@@ -1,6 +1,6 @@
 package com.hpspells.core.command;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.configuration.ConfigurationManager.ConfigurationType;
 
 import org.bukkit.ChatColor;
@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 		usage = "<command> [help|reload|config]")
 public class GeneralCommand extends HCommandExecutor {
 	
-    public GeneralCommand(HPS instance) {
+    public GeneralCommand(HarryPotterSpells instance) {
         super(instance);
     }
 

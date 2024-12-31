@@ -1,6 +1,6 @@
 package com.hpspells.core.spell;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 import org.bukkit.Effect;
@@ -20,7 +20,7 @@ import org.bukkit.entity.Player;
 )
 public class Incendio extends Spell {
 
-    public Incendio(HPS instance) {
+    public Incendio(HarryPotterSpells instance) {
         super(instance);
     }
 

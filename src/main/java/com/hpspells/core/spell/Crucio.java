@@ -18,7 +18,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.SpellTargeter.SpellHitEvent;
 import com.hpspells.core.spell.Spell.SpellInfo;
 
@@ -33,7 +33,7 @@ import com.hpspells.core.spell.Spell.SpellInfo;
 public class Crucio extends Spell implements Listener {
     private Set<String> crucioList = new HashSet<String>();
 
-    public Crucio(HPS instance) {
+    public Crucio(HarryPotterSpells instance) {
         super(instance);
     }
 

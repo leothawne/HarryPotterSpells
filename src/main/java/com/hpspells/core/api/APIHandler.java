@@ -1,22 +1,22 @@
 package com.hpspells.core.api;
 
-import com.hpspells.core.HPS;
+import com.hpspells.core.HarryPotterSpells;
 import com.hpspells.core.spell.SpellManager;
 
 public class APIHandler {
 	
 	public static APIHandler instance;
 	
-	private HPS HPS;
+	private HarryPotterSpells HPS;
 	private SpellManager spellManager;
 	
-	public APIHandler(HPS HPS) {
+	public APIHandler(HarryPotterSpells HPS) {
 		instance = this;
 		this.HPS = HPS;
 		spellManager = HPS.SpellManager;
 	}
 	
-	HPS getHPS() {
+	HarryPotterSpells getHPS() {
 		return HPS;
 	}
 	

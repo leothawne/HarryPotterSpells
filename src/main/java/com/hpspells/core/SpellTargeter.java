@@ -25,14 +25,14 @@ import com.hpspells.core.util.HPSParticle;
  * A targeter class that targets using a a fake projectile
  */
 public class SpellTargeter {
-    private HPS HPS;
+    private HarryPotterSpells HPS;
 
     /**
      * Constructs an instance of {@link SpellTargeter}
      *
-     * @param instance an instance of {@link HPS}
+     * @param instance an instance of {@link HarryPotterSpells}
      */
-    public SpellTargeter(HPS instance) {
+    public SpellTargeter(HarryPotterSpells instance) {
         this.HPS = instance;
     }
 
